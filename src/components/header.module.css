@@ -1,4 +1,9 @@
 .header-link {
+    border-bottom: 1px solid black;
     display: inline-block;
-    padding: 8px 12px;
+    margin: 8px 12px;
+}
+
+.logo {
+    width: 30px;
 }
