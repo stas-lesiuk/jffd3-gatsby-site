@@ -1,54 +1,37 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+jfddr3 - generowanie statycznych stron (SSG)
 
-## 🚀 Quick start
+Dzisiaj zapoznamy się z jednym z narzędzi do generowania statycznych stron, jakim jest Gatsby i spróbujemy stworzyć i opublikować prostą stronę z jego użyciem.
 
-1.  **Create a Gatsby site.**
+Dokumentację znajdziemy tutaj: https://www.gatsbyjs.com/docs/tutorial/
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+# Challenge 1 - przygotowania (zainstaluj Gatsby CLI oraz załóż konto na Gatsby Cloud)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+1. Polecenie `npm install -g gatsby-cli`. Jeżeli będzie problem z prawami dostępu - spróbuj użyć `sudo npm install -g gatsby-cli`
+1. Załóż konto na: https://www.gatsbyjs.com/dashboard/signup/
 
-2.  **Start developing.**
+# Challenge 2 - tworzymy podstawowy projekt
 
-    Navigate into your new site’s directory and start it up.
+Cały opis tego etapu znajdziesz tutaj: https://www.gatsbyjs.com/docs/tutorial/part-1/
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+1. Polecenie `gatsby new`. Większość odpowiedzi w command line poza nazwą projektu zostawiamy z domyślnymi wartościami. 
+1. `cd nazwa-katalogu-z-projektem`
+1. `gatsby develop` (odpowiednik `npm start` w Gatsby)
+1. (Opcjonalnie) Można również podejrzeć GraphQL Schema tutaj: http://localhost:8000/___graphql
+1. Zakładamy nowe repo na GitHub
+1. Push'ujemy projekt do tego repo
+1. Łączymy repo i Gatsby Cloud (dokładne instrukcje są w linku powyżej)
 
-3.  **Open the code and start customizing!**
+# Challenge 3 - więcej podstron.
 
-    Your site is now running at http://localhost:8000!
+Chcemy w tym zadaniu dodać kilka następnych stron.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+Treść zadania:
+- dodaj co najmniej 2 podstrony z osobnymi URL. Mogą to być strony `about` i `blog`, jak w oficjalnym tutorialu, ale możemy zrobić też inne.
+- Dodaj navbar, który by umożliwiał nawigację pomiędzy stronami.
 
-4.  **Learn more**
+**UWAGA:** Wszystkie pliki w katalogu `pages` w Gatsby będą dostępne jako podstrony.
+Jenak z Gatsby ważne jest to, żeby nie nazywać komponentów zgodnie z oficjalną konwencją (np. `NewsPage.jsx`), tylko `news-page.jsx`, chyba że chcemy mieć URL w postaci: `https://my-gatsby-site.gtsb.io/NewsPage`, zamiast `https://my-gatsby-site.gtsb.io/news-page`
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+**UWAGA 2:** Gatsby umożliwia cache'owanie i wczytywanie stron jeszcze zanim w nie klikniemy. Jednak, aby było to możliwe,
+zamiast `<a>` musimy użyć `<Link>` z Gatsby. Importujemy tak: `import { Link } from 'gatsby'`. Używamy tak: `<Link to="/about">O nas</Link>`
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
