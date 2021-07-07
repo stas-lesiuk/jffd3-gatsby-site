@@ -1,0 +1,11 @@
+.news-section {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.news-item {
+    margin: 0 auto 30px;
+    max-width: 400px;
+}
